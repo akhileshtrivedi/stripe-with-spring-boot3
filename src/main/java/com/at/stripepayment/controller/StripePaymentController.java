@@ -61,6 +61,7 @@ public class StripePaymentController {
 		params.put("limit", 3);
 
 		CustomerCollection customers = Customer.list(params);
+		System.out.println("List of customers-->"+customers.getData().size());
 		List<CustomerData> allCustomer = new ArrayList<CustomerData>();
 		for (int i = 0; i < customers.getData().size(); i++) {
 			CustomerData customerData = new CustomerData();
