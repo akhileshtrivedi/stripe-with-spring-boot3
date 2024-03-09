@@ -38,7 +38,6 @@ public class StripePaymentController {
 		Stripe.apiKey = stripeKey;
 
 		Map<String, Object> params = new HashMap<>();
-		params.put("limit", 3);
 
 		CustomerCollection customers = Customer.list(params);
 		List<CustomerData> allCustomer = new ArrayList<CustomerData>();
@@ -58,7 +57,6 @@ public class StripePaymentController {
 		Stripe.apiKey = stripeKey;
 
 		Map<String, Object> params = new HashMap<>();
-		params.put("limit", 3);
 
 		CustomerCollection customers = Customer.list(params);
 		System.out.println("List of customers-->"+customers.getData().size());
